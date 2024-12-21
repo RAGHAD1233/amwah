@@ -1,0 +1,159 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav-icons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-icons i {
+    font-size: 1.5rem; /* Size of icons */
+    display: inline-block;
+    animation: wave 2s infinite ease-in-out; /* Default wave animation */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect: Explosion */
+.nav-icons i:hover {
+    animation: explode 0.5s ease-out; /* Explosion on hover */
+}
+
+.nav-icons i:hover ~ i {
+    animation: wave 2s infinite ease-in-out; /* Keep other icons waving */
+}
+
+/* Keyframes for Wave Animation */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Keyframes for Explosion Animation */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2); /* Explosion size */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
+}
+
+/* Styling for links */
+.nav-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-icons a:hover {
+    color: #ff0000; /* Change icon color on hover */
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    text-align: center;
+    padding: 50px 20px;
+    background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #b20710;
+}
+
+/* Movie Rows */
+.movie-rows {
+    padding: 20px 50px;
+}
+
+.movie-rows h2 {
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
